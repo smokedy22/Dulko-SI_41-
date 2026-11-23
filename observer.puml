@@ -1,0 +1,14 @@
+@startuml
+title Observer: оповещение о прибытии поезда
+interface ArrivalListener
+class Station {
+  addListener()
+  removeListener()
+  trainArrived()
+}
+class Board implements ArrivalListener
+class Journal implements ArrivalListener
+class Mailing implements ArrivalListener
+class AsuListener implements ArrivalListener
+Station o--> ArrivalListener : оповещает >
+@enduml
