@@ -1,0 +1,14 @@
+@startuml
+title Factory Method: создание вагона
+interface Wagon
+interface WagonCreator
+class CoveredWagon implements Wagon
+class Platform implements Wagon
+class TankWagon implements Wagon
+class HopperWagon implements Wagon
+class CoveredWagonCreator implements WagonCreator
+class PlatformCreator implements WagonCreator
+class TankWagonCreator implements WagonCreator
+class HopperWagonCreator implements WagonCreator
+WagonCreator --> Wagon : создает >
+@enduml
